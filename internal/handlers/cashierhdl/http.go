@@ -19,6 +19,13 @@ func NewHTTPHandler(c port.CashierService) *HTTPHandler {
 	}
 }
 
+// HealthCheckHandler godoc
+// @summary Health Check
+// @description Health checking for the service
+// @id HealthCheckHandler
+// @produce plain
+// @response 200 {string} string "OK"
+// @router /do-order [post]
 func (hdl *HTTPHandler) DoOrder(c echo.Context) error {
 
 	request := domain.DoOrderRequest{}
